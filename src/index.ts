@@ -1,6 +1,7 @@
 import { DebugElement } from '@angular/core';
 import { ComponentFixture, tick } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { expect } from '@jest/globals';
 
 export function setValueTo(element: DebugElement, value: string) {
   element.nativeElement.value = value;
@@ -27,10 +28,10 @@ export function hasText<T>(
   fixture: ComponentFixture<T>,
   testId: string,
   textToEvaluate: string,
-): boolean {
+): void {
   const element = findEl<T>(fixture, testId);
   const textContent = element.nativeElement.textContent.trim();
-  return expect(textContent).toEqual(textToEvaluate);
+  expect(textContent).toEqual(textToEvaluate);
 }
 
 export function isEmpty<T>(element: DebugElement): boolean {
@@ -41,12 +42,12 @@ export function containText<T>(
   fixture: ComponentFixture<T>,
   testId: string,
   textToEvaluate: string,
-): boolean {
+): void {
   const element = findEl<T>(fixture, testId);
   const textContent = element.nativeElement.textContent.trim();
-  return expect(textContent.indexOf(textToEvaluate)).toBeGreaterThan(
-    -1,
-    `"${textContent}" no contiene "${textToEvaluate}"`,
+  expect(textContent.indexOf(textToEvaluate)).toBeGreaterThan(
+    -1
+    // 1,`"${textContent}" no contiene "${textToEvaluate}"`,
   );
 }
 

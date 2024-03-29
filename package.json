@@ -2,9 +2,15 @@
   "name": "angular-test-extensions",
   "version": "1.0.0",
   "description": "A set of helper methods to improve development velocity",
-  "main": "lib/angular-test-extensions.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+      "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup"
   },
   "repository": {
     "type": "git",
@@ -25,6 +31,12 @@
   "homepage": "https://github.com/AlexScigalszky/angular-test-extensions#readme",
   "devDependencies": {
     "ts-node": "^10.9.2",
+    "tsup": "^8.0.2",
     "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "@angular/core": "^17.3.2",
+    "@angular/platform-browser": "^17.3.2",
+    "@jest/globals": "^29.7.0"
   }
 }
