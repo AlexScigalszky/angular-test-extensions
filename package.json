@@ -1,0 +1,30 @@
+{
+  "name": "angular-test-extensions",
+  "version": "1.0.0",
+  "description": "A set of helper methods to improve development velocity",
+  "main": "lib/angular-test-extensions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexScigalszky/angular-test-extensions.git"
+  },
+  "keywords": [
+    "jest",
+    "test",
+    "angular",
+    "extensions",
+    "helper"
+  ],
+  "author": "Alex P. Scigalszky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexScigalszky/angular-test-extensions/issues"
+  },
+  "homepage": "https://github.com/AlexScigalszky/angular-test-extensions#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  }
+}
